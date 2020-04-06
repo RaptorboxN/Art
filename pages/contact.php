@@ -1,6 +1,7 @@
 <?php
 include '../head.php';
 ?>
+<link rel="stylesheet" type="text/css" href="../CSS/contactStyle.css">
 
 <div class="ContactPage">
     <div class="container">

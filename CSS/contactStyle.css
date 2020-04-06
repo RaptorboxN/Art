@@ -1,5 +1,5 @@
 .ContactPage {
-    background-image: url('../img/Background1.jpg');
+    background-image: url('../IMG/Background1.jpg');
     background-size: 100% 100%;
     height: 100%;
     margin: -10px 0 0 0;
@@ -17,17 +17,19 @@
 .ContactLabel {
     color: White;
     font-size: 20px;
-    margin:  0 50px 0 0;
+    margin:  0 0 0 0;
 }
 
 .ContactInput {
     float: right;
     border-radius: 20px;
     padding-left: 5px;
+    background: #f8f9faa3;
 }
 
 .ContactText {
     width: 100%;
+    background: #f8f9faa3;
 }
 
 .ContactBtn {
