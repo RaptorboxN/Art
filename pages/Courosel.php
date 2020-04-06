@@ -4,3 +4,7 @@ include '../nav.php';
 ?>
 
 <link rel="stylesheet" type="text/css" href="../CSS/couroselStyle.css">
+
+<div class="CouroselPage">
+
+</div>
