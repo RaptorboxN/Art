@@ -1,4 +1,5 @@
 <?php
+include '../head.php';
 ?>
 
 <div class="ContactPage">
@@ -6,15 +7,15 @@
         <div class="text-center form">
             <form class="ContactForm">
                 <div class="form-group">
-                    <label class="ContactLabel">{{__('contact.name')}}</label>
+                    <label class="ContactLabel">Naam</label>
                     <input class="ContactInput">
                 </div>
                 <div class="form-group">
-                    <label class="ContactLabel">{{__('contact.email')}} </label>
+                    <label class="ContactLabel">Email</label>
                     <input class="ContactInput">
                 </div>
                 <div class="form-group">
-                    <label class="ContactLabel">{{__('contact.subject')}} </label>
+                    <label class="ContactLabel">Onderwerp</label>
                     <input class="ContactInput">
                 </div>
                 <div class="form-group">
