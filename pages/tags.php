@@ -55,7 +55,7 @@
 
                       <?php
                         include 'db.php';
-                        $sql = "SELECT title FROM items";
+                        $sql = "SELECT * FROM items";
                         $result = $conn->query($sql);
 
                         if ($result->num_rows > 0) {
@@ -79,7 +79,7 @@
 
                       <?php
                         include 'db.php';
-                        $sql = "SELECT title FROM tags";
+                        $sql = "SELECT * FROM tags";
                         $result = $conn->query($sql);
 
                         if ($result->num_rows > 0) {
@@ -95,17 +95,17 @@
                 </select>
                   </div>
               </div>
-          </div>
-        </div>
+            <div class="row">
+                <div class="col-sm-4"></div>
 
-        <div class="row">
-            <div class="col-sm-4"></div>
+                <div class="col-sm-4 text-center">
+                    <button class="btn btn-success text-center" type="button" id="addButton" aria-haspopup="true" aria-expanded="false">
+                        Add
+                    </button>
 
-            <div class="col-sm-4 text-center">
-                <button class="btn btn-success text-center" type="button" id="addButton" aria-haspopup="true" aria-expanded="false">
-                    Add
-                </button>
+                </div>
             </div>
+          </div>
         </div>
     </div>
   </div>

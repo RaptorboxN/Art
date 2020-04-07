@@ -59,7 +59,8 @@ include '../nav.php';
         <div class="row">
             <?php
                 include 'db.php';
-                $sql = "SELECT * FROM items";
+                $sql = "SELECT I.title, I.description, T.title as tag FROM items I
+                        JOIN tags T ON T.id = I.tag";
                 $result = $conn->query($sql);
 
                 if ($result->num_rows > 0) {
