@@ -55,6 +55,34 @@ include '../nav.php';
 
         </div>
         <hr>
+
+        <div class="row">
+            <?php
+                include 'db.php';
+                $sql = "SELECT * FROM items";
+                $result = $conn->query($sql);
+
+                if ($result->num_rows > 0) {
+                // output data of each row
+                while($row = $result->fetch_assoc()) {
+                    echo '<div class="col-sm">
+                            <div class="card">
+                                <img class="card-img-top" src="../img/art2.jpg" alt="Card image cap">
+                              <div class="card-body">
+                                <h5 class="card-title">' . $row["title"] . '</h5>
+                                <p class="card-text">' . $row["description"] . '</p>
+                                <span class="badge badge-danger">' . $row["tag"] . '</span>
+                              </div>
+                            </div>
+                        </div>';
+                }
+                } else {
+                echo "0 results";
+                }
+                $conn->close();
+              ?>
+
+        </div>
     </div>
 
 
