@@ -7,6 +7,9 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Select CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
 </head>
 <body>
 <header>
@@ -43,53 +46,66 @@
 
 <main role="main">
 
-  <?php include 'db.php';?>
-  <?php
-    SELECT * FROM table_name
-    $sql = "SELECT id, firstname, lastname FROM MyGuests";
-    $result = $conn->query($sql);
-
-    if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-        echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
-    }
-    } else {
-    echo "0 results";
-    }
-    $conn->close();
-  ?>
-
   <div class="album py-5 bg-light">
     <div class="container">
         <div class="row">
             <div class="col-sm-5">
-                <div class="dropdown float-right">
-                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Item
-                  </button>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </div>
-                </div>
+
+                <select class="selectpicker float-right" data-style="btn-primary" multiple title="Item">
+
+                      <?php
+                        include 'db.php';
+                        $sql = "SELECT title FROM items";
+                        $result = $conn->query($sql);
+
+                        if ($result->num_rows > 0) {
+                        // output data of each row
+                        while($row = $result->fetch_assoc()) {
+                            echo '<option>' . $row["title"] . '</option>';
+                        }
+                        } else {
+                        echo "0 results";
+                        }
+                        $conn->close();
+                      ?>
+                  </select>
             </div>
 
             <div class="col-sm-2"></div>
 
             <div class="col-sm-5">
-                <div class="dropdown">
-                  <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Tag
-                  </button>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
+
+                <select class="selectpicker" data-style="btn-danger" multiple title="Tag">
+
+                      <?php
+                        include 'db.php';
+                        $sql = "SELECT title FROM tags";
+                        $result = $conn->query($sql);
+
+                        if ($result->num_rows > 0) {
+                        // output data of each row
+                        while($row = $result->fetch_assoc()) {
+                            echo '<option>' . $row["title"] . '</option>';
+                        }
+                        } else {
+                        echo "0 results";
+                        }
+                        $conn->close();
+                      ?>
+                </select>
                   </div>
               </div>
           </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4"></div>
+
+            <div class="col-sm-4 text-center">
+                <button class="btn btn-success text-center" type="button" id="addButton" aria-haspopup="true" aria-expanded="false">
+                    Add
+                </button>
+            </div>
         </div>
     </div>
   </div>
@@ -101,5 +117,7 @@
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<!-- Select JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/js/bootstrap-select.min.js"></script>
 </body>
 </html>
