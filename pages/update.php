@@ -1,6 +1,10 @@
 <?php
 include 'db.php';
-$sql = "UPDATE MyGuests SET lastname='Doe' WHERE id=2";
+
+$item = $_POST['Item'];
+$tag = $_POST['Tag'];
+
+$sql = "UPDATE items SET tag='" . $tag . "' WHERE id=" . $item . "";
 
 if ($conn->query($sql) === TRUE) {
     echo "Record updated successfully";
@@ -9,4 +13,6 @@ if ($conn->query($sql) === TRUE) {
 }
 
 $conn->close();
+
+header( 'Location: Courosel.php' )
 ?>
