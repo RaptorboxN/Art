@@ -37,11 +37,11 @@ include '../nav.php';
 <!--        einde van de banner-->
 <!--        begin van de inhoud van de pagina-->
         <hr>
-        <div class="row carouselInfo">
+        <div class="row">
             <div class="col-3">
                 <img class="imgStyle" src="../IMG/Art4.jpg">
             </div>
-            <div class="col-9">
+            <div class="col-9 carouselInfo">
                 <p>
                     Alteration literature to or an sympathize mr imprudence.
                     Of is ferrars subject as enjoyed or tedious cottage.
@@ -90,9 +90,6 @@ include '../nav.php';
 
 
 
-posotion absolute
-right 0
-bottom 0
-left 0
+
 
 
