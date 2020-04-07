@@ -48,10 +48,11 @@
 
   <div class="album py-5 bg-light">
     <div class="container">
+        <form action="update.php" method="post">
         <div class="row">
             <div class="col-sm-5">
 
-                <select class="selectpicker float-right" data-style="btn-primary" title="Item">
+                <select class="selectpicker float-right" data-style="btn-primary" title="Item" name="Item" required>
 
                       <?php
                         include 'db.php';
@@ -61,7 +62,7 @@
                         if ($result->num_rows > 0) {
                         // output data of each row
                         while($row = $result->fetch_assoc()) {
-                            echo '<option>' . $row["title"] . '</option>';
+                            echo '<option value="' . $row["id"] . '">' . $row["title"] . '</option>';
                         }
                         } else {
                         echo "0 results";
@@ -75,7 +76,7 @@
 
             <div class="col-sm-5">
 
-                <select class="selectpicker" data-style="btn-danger" title="Tag">
+                <select class="selectpicker" data-style="btn-danger" title="Tag" name="Tag" required>
 
                       <?php
                         include 'db.php';
@@ -85,7 +86,7 @@
                         if ($result->num_rows > 0) {
                         // output data of each row
                         while($row = $result->fetch_assoc()) {
-                            echo '<option>' . $row["title"] . '</option>';
+                            echo '<option value="' . $row["id"] . '">' . $row["title"] . '</option>';
                         }
                         } else {
                         echo "0 results";
@@ -95,20 +96,20 @@
                 </select>
                   </div>
               </div>
-            <div class="row">
+              <div class="row">
                 <div class="col-sm-4"></div>
 
                 <div class="col-sm-4 text-center">
-                    <button class="btn btn-success text-center" type="button" id="addButton" aria-haspopup="true" aria-expanded="false">
+                    <button class="btn btn-success text-center" type="submit" id="addButton" aria-haspopup="true" aria-expanded="false">
                         Add
                     </button>
-
                 </div>
             </div>
-          </div>
-        </div>
+        </form>
+      </div>
     </div>
-  </div>
+</div>
+</div>
 
 </main>
 
