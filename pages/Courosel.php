@@ -57,6 +57,45 @@ include '../nav.php';
         <hr>
 
         <div class="row">
+            <div class="col-3">
+                <img class="imgStyle" src="../IMG/Art3.jpg">
+            </div>
+            <div class="col-9 carouselInfo">
+                <p>
+                    Alteration literature to or an sympathize mr imprudence.
+                    Of is ferrars subject as enjoyed or tedious cottage.
+                    Procuring as in resembled by in agreeable.
+                    Next long no gave mr eyes.
+                    Admiration advantages no he celebrated so pianoforte unreserved.
+                    Not its herself forming charmed amiable.
+                    Him why feebly expect future now.
+                </p>
+            </div>
+
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-3">
+                <img class="imgStyle" src="../IMG/Art2.jpg">
+            </div>
+            <div class="col-9 carouselInfo">
+                <p>
+                    Alteration literature to or an sympathize mr imprudence.
+                    Of is ferrars subject as enjoyed or tedious cottage.
+                    Procuring as in resembled by in agreeable.
+                    Next long no gave mr eyes.
+                    Admiration advantages no he celebrated so pianoforte unreserved.
+                    Not its herself forming charmed amiable.
+                    Him why feebly expect future now.
+                </p>
+            </div>
+
+        </div>
+        <hr>
+        
+
+
+        <div class="row">
             <?php
                 include 'db.php';
                 $sql = "SELECT I.title, I.description, T.title as tag FROM items I
@@ -84,6 +123,7 @@ include '../nav.php';
               ?>
 
         </div>
+
     </div>
 
 
