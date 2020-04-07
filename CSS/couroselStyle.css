@@ -20,3 +20,13 @@ carouselItemImg {
     height: 200px;
     width: 100%;
 }
+
+.carouselInfo{
+    background-color: #f8f9fa80;
+    margin: 0 0 0 0;
+}
+
+ .imgStyle {
+     height: 200px;
+     width: 200px;
+ }
