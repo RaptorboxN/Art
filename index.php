@@ -124,4 +124,7 @@ include 'resources/head.php';
     </div><!-- .CouroselMain -->
 </div><!-- .CouroselPage -->
 
-<?php include 'resources/foot.php'; ?>
+<?php
+$js='';
+include 'resources/foot.php';
+?>

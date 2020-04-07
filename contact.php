@@ -36,4 +36,7 @@ include 'resources/head.php';
     </div>
 </div>
 
-<?php include 'resources/foot.php'; ?>
+<?php
+$js='';
+include 'resources/foot.php';
+?>
