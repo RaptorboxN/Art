@@ -51,7 +51,7 @@
         <div class="row">
             <div class="col-sm-5">
 
-                <select class="selectpicker float-right" data-style="btn-primary" multiple title="Item">
+                <select class="selectpicker float-right" data-style="btn-primary" title="Item">
 
                       <?php
                         include 'db.php';
@@ -75,7 +75,7 @@
 
             <div class="col-sm-5">
 
-                <select class="selectpicker" data-style="btn-danger" multiple title="Tag">
+                <select class="selectpicker" data-style="btn-danger" title="Tag">
 
                       <?php
                         include 'db.php';
