@@ -1,4 +1,4 @@
 .bootstrap-select>.dropdown-toggle.bs-placeholder.btn-primary,
-.bootstrap-select>.dropdown-toggle.bs-placeholder.btn-warning {
+.bootstrap-select>.dropdown-toggle.bs-placeholder.btn-danger {
     color: #ffffff !important;
 }

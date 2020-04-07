@@ -3,7 +3,10 @@ $title="Tag toevoegen | Art";
 $css='
     <!-- Select CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.9/dist/css/bootstrap-select.min.css">
-    ';
+
+    <!-- Contact child-theme -->
+    <link rel="stylesheet" type="text/css" href="css/tags.css">
+';
 include 'resources/head.php';
 ?>
 
