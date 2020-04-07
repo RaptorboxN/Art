@@ -37,11 +37,11 @@ include '../nav.php';
 <!--        einde van de banner-->
 <!--        begin van de inhoud van de pagina-->
         <hr>
-        <div class="row carouselInfo">
+        <div class="row">
             <div class="col-3">
                 <img class="imgStyle" src="../IMG/Art4.jpg">
             </div>
-            <div class="col-9">
+            <div class="col-9 carouselInfo">
                 <p>
                     Alteration literature to or an sympathize mr imprudence.
                     Of is ferrars subject as enjoyed or tedious cottage.
@@ -55,6 +55,75 @@ include '../nav.php';
 
         </div>
         <hr>
+
+        <div class="row">
+            <div class="col-3">
+                <img class="imgStyle" src="../IMG/Art3.jpg">
+            </div>
+            <div class="col-9 carouselInfo">
+                <p>
+                    Alteration literature to or an sympathize mr imprudence.
+                    Of is ferrars subject as enjoyed or tedious cottage.
+                    Procuring as in resembled by in agreeable.
+                    Next long no gave mr eyes.
+                    Admiration advantages no he celebrated so pianoforte unreserved.
+                    Not its herself forming charmed amiable.
+                    Him why feebly expect future now.
+                </p>
+            </div>
+
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-3">
+                <img class="imgStyle" src="../IMG/Art2.jpg">
+            </div>
+            <div class="col-9 carouselInfo">
+                <p>
+                    Alteration literature to or an sympathize mr imprudence.
+                    Of is ferrars subject as enjoyed or tedious cottage.
+                    Procuring as in resembled by in agreeable.
+                    Next long no gave mr eyes.
+                    Admiration advantages no he celebrated so pianoforte unreserved.
+                    Not its herself forming charmed amiable.
+                    Him why feebly expect future now.
+                </p>
+            </div>
+
+        </div>
+        <hr>
+        
+
+
+        <div class="row">
+            <?php
+                include 'db.php';
+                $sql = "SELECT I.title, I.description, T.title as tag FROM items I
+                        JOIN tags T ON T.id = I.tag";
+                $result = $conn->query($sql);
+
+                if ($result->num_rows > 0) {
+                // output data of each row
+                while($row = $result->fetch_assoc()) {
+                    echo '<div class="col-sm">
+                            <div class="card">
+                                <img class="card-img-top" src="../img/art2.jpg" alt="Card image cap">
+                              <div class="card-body">
+                                <h5 class="card-title">' . $row["title"] . '</h5>
+                                <p class="card-text">' . $row["description"] . '</p>
+                                <span class="badge badge-danger">' . $row["tag"] . '</span>
+                              </div>
+                            </div>
+                        </div>';
+                }
+                } else {
+                echo "0 results";
+                }
+                $conn->close();
+              ?>
+
+        </div>
+
     </div>
 
 
@@ -62,9 +131,6 @@ include '../nav.php';
 
 
 
-posotion absolute
-right 0
-bottom 0
-left 0
+
 
 
