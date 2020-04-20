@@ -96,7 +96,7 @@ include 'resources/head.php';
         <div class="row">
             <?php
                 include 'resources/db.php';
-                $sql = "SELECT I.title, I.description, T.title as tag FROM items I
+                $sql = "SELECT I.title, I.description, I.img, T.title as tag FROM items I
                         JOIN tags T ON T.id = I.tag";
                 $result = $conn->query($sql);
 
@@ -105,7 +105,7 @@ include 'resources/head.php';
                 while($row = $result->fetch_assoc()) {
                     echo '<div class="col-sm">
                             <div class="card">
-                                <img class="card-img-top" src="images/art2.jpg" alt="Card image cap">
+                                <img class="card-img-top" src="images/Art' . $row["img"] . '.jpg" alt="Card image cap">
                               <div class="card-body">
                                 <h5 class="card-title">' . $row["title"] . '</h5>
                                 <p class="card-text">' . $row["description"] . '</p>
