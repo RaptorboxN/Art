@@ -36,3 +36,7 @@ carouselItemImg {
      height: 200px;
      width: 200px;
  }
+
+.card { /* Aleen voor index pagina, als ergens anders cards worden gebruikt dan moet dit in een child-theme */
+    margin-bottom: 30;
+}
