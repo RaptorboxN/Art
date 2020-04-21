@@ -58,8 +58,10 @@ include 'resources/head.php';
 
             <?php
             include 'resources/db.php';
-            $sql = "SELECT title, description, img, title 
-                    FROM items";
+            $sql = "SELECT img, description
+                    FROM items
+                    GROUP BY img";
+
             $result = $conn->query($sql);
 
             if ($result->num_rows > 0) {
@@ -70,7 +72,7 @@ include 'resources/head.php';
                                 <img class="card-img-top" src="images/Art' . $row["img"] . '.jpg" alt="Card image cap">
                             </div>
                             <div class="col-9 carouselInfo">
-                                <p class="card-text">' . $row["description"] . '</p>
+                                <p>' . $row["description"] . '</p>
                             </div>  
                         </div>
                         <hr>';
