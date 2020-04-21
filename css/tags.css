@@ -1,4 +1,8 @@
-.bootstrap-select>.dropdown-toggle.bs-placeholder.btn-primary,
-.bootstrap-select>.dropdown-toggle.bs-placeholder.btn-danger {
-    color: #ffffff !important;
+.row {
+    padding: 10px;
+}
+
+.btn-light {
+    border: 1px solid #ced4da;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }

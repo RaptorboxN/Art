@@ -1,9 +1,7 @@
-html {
-    background: url(../IMG/Background2.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+nav {
+    -webkit-box-shadow: 0px 5px 5px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 5px 5px -5px rgba(0,0,0,0.75);
+    box-shadow: 0px 5px 5px -5px rgba(0,0,0,0.75);
 }
 
 .CouroselPage {
