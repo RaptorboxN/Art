@@ -20,15 +20,31 @@ include 'resources/head.php';
                 <div class="col text-center"><h2>Tag aanmaken:</h2></div>
             </div>
             <div class="row">
-                <div class="col-sm-3 offset-sm-4">
+                <div class="col-sm-3 offset-3">
 
                     <input type="text" class="form-control" id="Title" name="Title" placeholder="Tag titel">
 
                 </div>
 
+                <h3>+</h3>
+
+                <div class="col-sm-4">
+
+                    <select class="selectpicker" title="Kleur" name="Color" required>
+                        <option value="danger">Rood</option>
+                        <option value="success">Groen</option>
+                        <option value="primary">Blauw</option>
+                        <option value="warning">Geel</option>
+                        <option value="info">Lichtblauw</option>
+                        <option value="dark">Zwart</option>
+                        <option value="secondary">Grijs</option>
+                        <option value="light">Wit</option>
+                    </select>
+                </div>
+
                 <div class="col-sm-1 text-center">
                     <button class="btn btn-success text-center" type="submit" id="addButton" aria-haspopup="true" aria-expanded="false">
-                        Toevoegen
+                        Aanmaken
                     </button>
                 </div>
             </div>
@@ -41,7 +57,7 @@ include 'resources/head.php';
                 <div class="col text-center"><h2>Tag toewijzen:</h2></div>
             </div>
             <div class="row">
-                <div class="col-sm-5">
+                <div class="col-sm-4 offset-2">
 
                     <select class="selectpicker float-right" title="Item" name="Item" required>
 
@@ -63,7 +79,9 @@ include 'resources/head.php';
                       </select>
                 </div>
 
-                <div class="col-sm-5 offset-2">
+                <h3>+</h3>
+
+                <div class="col-sm-4">
 
                     <select class="selectpicker" title="Tag" name="Tag" required>
 
@@ -84,13 +102,10 @@ include 'resources/head.php';
                           ?>
                     </select>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4"></div>
 
-                <div class="col-sm-4 text-center">
+                <div class="col-sm-1">
                     <button class="btn btn-success text-center" type="submit" id="toewijsButton" aria-haspopup="true" aria-expanded="false">
-                        Toevoegen
+                        Toewijzen
                     </button>
                 </div>
             </div>

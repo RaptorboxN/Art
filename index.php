@@ -98,7 +98,7 @@ include 'resources/head.php';
         <div class="row">
             <?php
                 include 'resources/db.php';
-                $sql = "SELECT I.title, I.description, I.img, T.title as tag FROM items I
+                $sql = "SELECT I.title, I.description, I.img, T.color, T.title as tag FROM items I
                         JOIN tags T ON T.id = I.tag";
                 $result = $conn->query($sql);
 
@@ -111,7 +111,7 @@ include 'resources/head.php';
                               <div class="card-body">
                                 <h5 class="card-title">' . $row["title"] . '</h5>
                                 <p class="card-text">' . $row["description"] . '</p>
-                                <span class="badge badge-danger">' . $row["tag"] . '</span>
+                                <span class="badge badge-' . $row["color"] . '">' . $row["tag"] . '</span>
                               </div>
                             </div>
                         </div>';
