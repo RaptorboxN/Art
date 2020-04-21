@@ -39,6 +39,8 @@ include 'resources/head.php';
         <div class="row">
             <div class="col-3">
                 <img class="imgStyle" src="images/Art4.jpg">
+<!--                plaats hier de php voor de img-->
+
             </div>
             <div class="col-9 carouselInfo">
                 <p>
