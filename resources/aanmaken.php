@@ -1,10 +1,10 @@
 <?php
 include 'db.php';
 
-$item = $_POST['Item'];
-$tag = $_POST['Tag'];
+$Title = $_POST['Title'];
+$Color = $_POST['Color'];
 
-$sql = "UPDATE items SET tag='" . $tag . "' WHERE id=" . $item . "";
+$sql = "INSERT INTO tags (title, color) VALUES ('" . $Title . "', '" . $Color . "')";
 
 if ($conn->query($sql) === TRUE) {
     echo "Record updated successfully";
@@ -14,5 +14,5 @@ if ($conn->query($sql) === TRUE) {
 
 $conn->close();
 
-header( 'Location: ../index.php' )
+header( 'Location: ../tags.php' )
 ?>
