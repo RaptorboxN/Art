@@ -14,5 +14,5 @@ if ($conn->query($sql) === TRUE) {
 
 $conn->close();
 
-header( 'Location: Courosel.php' )
+header( 'Location: ../index.php' )
 ?>

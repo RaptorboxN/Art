@@ -1,5 +1,13 @@
+html {
+    background: url(../IMG/Background2.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 .CouroselPage {
-    background-image: url('../IMG/Background2.jpg');
+    background-image: url('../images/Background2.jpg');
     background-size: 100% 100%;
     height: 100%;
     margin: 0 0 0 0;

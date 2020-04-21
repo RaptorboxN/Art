@@ -1,8 +1,11 @@
 <?php
-include '../head.php';
-include '../nav.php';
+$title="Contact | Art";
+$css='
+    <!-- Contact child-theme -->
+    <link rel="stylesheet" type="text/css" href="css/contact.css">
+    ';
+include 'resources/head.php';
 ?>
-<link rel="stylesheet" type="text/css" href="../CSS/contactStyle.css">
 
 <div class="ContactPage">
     <div class="container">
@@ -32,3 +35,8 @@ include '../nav.php';
         </div>
     </div>
 </div>
+
+<?php
+$js='';
+include 'resources/foot.php';
+?>
