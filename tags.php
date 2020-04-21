@@ -89,10 +89,76 @@ include 'resources/head.php';
                 <div class="col-sm-4"></div>
 
                 <div class="col-sm-4 text-center">
-                    <button class="btn btn-success text-center" type="submit" id="addButton" aria-haspopup="true" aria-expanded="false">
+                    <button class="btn btn-success text-center" type="submit" id="toewijsButton" aria-haspopup="true" aria-expanded="false">
                         Toevoegen
                     </button>
                 </div>
+            </div>
+        </form>
+
+        <hr>
+
+        <form action="resources/verwijderen.php" method="post">
+            <div class="row">
+                <div class="col text-center"><h2 style="color: red;">Tag verwijderen:</h2></div>
+            </div>
+            <div class="row">
+
+                <div class="col-sm-3 offset-4">
+
+                    <select class="selectpicker" title="Tag" name="Verwijder" required>
+
+                          <?php
+                            include 'resources/db.php';
+                            $sql = "SELECT * FROM tags";
+                            $result = $conn->query($sql);
+
+                            if ($result->num_rows > 0) {
+                            // output data of each row
+                            while($row = $result->fetch_assoc()) {
+                                echo '<option value="' . $row["id"] . '">' . $row["title"] . '</option>';
+                            }
+                            } else {
+                            echo "0 results";
+                            }
+                            $conn->close();
+                          ?>
+                    </select>
+                </div>
+
+                <div class="col-sm-1">
+
+                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">
+                        Verwijderen
+                    </button>
+                </div>
+
+                <!-- Button trigger modal -->
+
+                <!-- Modal -->
+                <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="deleteModalLabel">Weet u zeker dat u deze tag wilt verwijderen?</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <p>Controleer of de tag niet meer is toegewezen aan een project, of dat de tag nog nodig is voor een project.</p>
+                        <p><b>Dit kan niet ontdaan worden gemaakt!</b></p>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Niet verwijderen</button>
+                        <button class="btn btn-danger text-center" type="submit" id="deleteButton" aria-haspopup="true" aria-expanded="false">
+                            Verwijderen
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
             </div>
         </form>
 
