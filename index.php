@@ -83,7 +83,7 @@ include 'resources/head.php';
             $conn->close();
             ?>
 
-        </div>
+
         <hr>
 
         <div class="row">
