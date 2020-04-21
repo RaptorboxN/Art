@@ -1,10 +1,9 @@
 <?php
 include 'db.php';
 
-$item = $_POST['Item'];
-$tag = $_POST['Tag'];
+$Title = $_POST['Title'];
 
-$sql = "UPDATE items SET tag='" . $tag . "' WHERE id=" . $item . "";
+$sql = "INSERT INTO tags (title) VALUES ('" . $Title . "')";
 
 if ($conn->query($sql) === TRUE) {
     echo "Record updated successfully";
@@ -14,5 +13,5 @@ if ($conn->query($sql) === TRUE) {
 
 $conn->close();
 
-header( 'Location: ../index.php' )
+header( 'Location: ../tags.php' )
 ?>

@@ -15,14 +15,14 @@ include 'resources/head.php';
 
         <hr>
 
-        <form action="resources/test.php" method="post">
+        <form action="resources/aanmaken.php" method="post">
             <div class="row">
                 <div class="col text-center"><h2>Tag aanmaken:</h2></div>
             </div>
             <div class="row">
                 <div class="col-sm-3 offset-sm-4">
 
-                    <input type="text" class="form-control" id="name" placeholder="Tag titel">
+                    <input type="text" class="form-control" id="Title" name="Title" placeholder="Tag titel">
 
                 </div>
 
@@ -36,7 +36,7 @@ include 'resources/head.php';
 
         <hr>
 
-        <form action="resources/update.php" method="post">
+        <form action="resources/toewijzen.php" method="post">
             <div class="row">
                 <div class="col text-center"><h2>Tag toewijzen:</h2></div>
             </div>
