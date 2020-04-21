@@ -14,8 +14,27 @@ include 'resources/head.php';
                 <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
             </ol>
             <div class="carousel-inner align-content-center">
+<!--                --><?php
+//                include 'resources/db.php';
+//                $sql = "SELECT img
+//                        FROM items";
+//                $result = $conn->query($sql);
+//
+//                if ($result->num_rows > 0) {
+//                    // output data of each row
+//                    while($row = $result->fetch_assoc()) {
+//                        echo '<div class="carousel-item">
+//                                    <img class="d-block carouselItemImg" src="images/Art' . $row["img"] . '.jpg">
+//                                </div>
+//                            ';
+//                    }
+//                } else {
+//                    echo "0 results";
+//                }
+//                $conn->close();
+//                ?>
                 <div class="carousel-item active">
-                    <img class="d-block carouselItemImg" src="images/Art4.jpg" alt="First slide">
+                    <img class="d-block carouselItemImg" src="images/Art4.jpg" >
                 </div>
                 <div class="carousel-item">
                     <img class="d-block" src="images/Art2.jpg" alt="Second slide">
@@ -36,63 +55,33 @@ include 'resources/head.php';
 <!--        einde van de banner-->
 <!--        begin van de inhoud van de pagina-->
         <hr>
-        <div class="row">
-            <div class="col-3">
-                <img class="imgStyle" src="images/Art4.jpg">
-<!--                plaats hier de php voor de img-->
 
-            </div>
-            <div class="col-9 carouselInfo">
-                <p>
-                    Alteration literature to or an sympathize mr imprudence.
-                    Of is ferrars subject as enjoyed or tedious cottage.
-                    Procuring as in resembled by in agreeable.
-                    Next long no gave mr eyes.
-                    Admiration advantages no he celebrated so pianoforte unreserved.
-                    Not its herself forming charmed amiable.
-                    Him why feebly expect future now.
-                </p>
-            </div>
+            <?php
+            include 'resources/db.php';
+            $sql = "SELECT title, description, img, title 
+                    FROM items";
+            $result = $conn->query($sql);
 
-        </div>
-        <hr>
-
-        <div class="row">
-            <div class="col-3">
-                <img class="imgStyle" src="images/Art3.jpg">
-            </div>
-            <div class="col-9 carouselInfo">
-                <p>
-                    Alteration literature to or an sympathize mr imprudence.
-                    Of is ferrars subject as enjoyed or tedious cottage.
-                    Procuring as in resembled by in agreeable.
-                    Next long no gave mr eyes.
-                    Admiration advantages no he celebrated so pianoforte unreserved.
-                    Not its herself forming charmed amiable.
-                    Him why feebly expect future now.
-                </p>
-            </div>
+            if ($result->num_rows > 0) {
+                // output data of each row
+                while($row = $result->fetch_assoc()) {
+                    echo '<div class="row">
+                            <div class="col-3">
+                                <img class="card-img-top" src="images/Art' . $row["img"] . '.jpg" alt="Card image cap">
+                            </div>
+                            <div class="col-9 carouselInfo">
+                                <p class="card-text">' . $row["description"] . '</p>
+                            </div>  
+                        </div>
+                        <hr>';
+                }
+            } else {
+                echo "0 results";
+            }
+            $conn->close();
+            ?>
 
         </div>
-        <hr>
-        <div class="row">
-            <div class="col-3">
-                <img class="imgStyle" src="images/Art2.jpg">
-            </div>
-            <div class="col-9 carouselInfo">
-                <p>
-                    Alteration literature to or an sympathize mr imprudence.
-                    Of is ferrars subject as enjoyed or tedious cottage.
-                    Procuring as in resembled by in agreeable.
-                    Next long no gave mr eyes.
-                    Admiration advantages no he celebrated so pianoforte unreserved.
-                    Not its herself forming charmed amiable.
-                    Him why feebly expect future now.
-                </p>
-            </div>
-
-        </div>
-
         <hr>
 
         <div class="row">
