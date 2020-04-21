@@ -22,7 +22,7 @@ include 'resources/head.php';
             <div class="row">
                 <div class="col-sm-3 offset-3">
 
-                    <input type="text" class="form-control" id="Title" name="Title" placeholder="Tag titel">
+                    <input type="text" class="form-control" id="Title" name="Title" placeholder="Tag titel" required>
 
                 </div>
 
